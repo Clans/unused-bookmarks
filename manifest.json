@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Get know when was the last time when you've opened each bookmark.",
   "permissions": [
-    "bookmarks", "storage", "webNavigation"
+    "bookmarks", "storage", "webNavigation", "activeTab"
   ],
   "icons": {
     "32": "images/icon32.png",
@@ -14,7 +14,7 @@
     "512": "images/icon512.png"
   },
   "content_scripts": [{
-   "matches": ["http://*/", "https://*/"],
+   "matches": ["https://example.com/"],
    "js": ["jquery.min.js", "popup.js"],
    "css": ["styles.css"]
  }],
