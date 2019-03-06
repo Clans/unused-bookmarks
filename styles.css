@@ -1,0 +1,171 @@
+.unused-bookmarks {
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
+    background: #F0F2EF;
+}
+
+.unused-bookmarks a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.unused-bookmarks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.unused-bookmarks li {
+    margin: .5em 0;
+}
+
+.header {
+    width: 100%;
+    display: table;
+    color: #39A9EF;
+    font-weight: 400;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#header-number {
+    font-size: 1.2em;
+    display: table-cell;
+    padding-right: 10px;
+    width: 3%;
+    text-align: right;
+}
+
+#header-title-container {
+    font-size: 1.2em;
+    display: table-cell;
+    width: 50%;
+}
+
+#header-title-container.regular:before {
+    content: "";
+}
+
+#header-title-container.down:before {
+    content: "\2193\00a0";
+}
+
+#header-title-container.up:before {
+    content: "\2191\00a0";
+}
+
+#header-created-date {
+    font-size: 1.2em;
+    display: table-cell;
+    width: 15%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#header-created-date.regular:before {
+    content: "";
+}
+
+#header-created-date.down:before {
+    content: "\2193\00a0";
+}
+
+#header-created-date.up:before {
+    content: "\2191\00a0";
+}
+
+#header-last-visited {
+    font-size: 1.2em;
+    display: table-cell;
+    width: 15%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#header-last-visited.regular:before {
+    content: "";
+}
+
+#header-last-visited.down:before {
+    content: "\2193\00a0";
+}
+
+#header-last-visited.up:before {
+    content: "\2191\00a0";
+}
+
+#header-actions {
+    font-size: 1.2em;
+    display: table-cell;
+    width: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.item-container {
+    width: 100%;
+    display: table;
+    /*background: rgba(0,0,0,0.78);*/
+    color: #000;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    border-radius: 4px;
+    transition: background .3s ease;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.item-container:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.number {
+    display: table-cell;
+    font-size: 1.3em;
+    padding-right: 10px;
+    width: 3%;
+    text-align: right;
+}
+
+.title-container {
+    display: table-cell;
+    width: 50%;
+}
+
+.bookmark-title {
+    font-size: 1.3em;
+}
+
+.bookmark-tags {
+    margin-top: 6px;
+}
+
+.created-date {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 15%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+.url {
+    color: #999999;
+}
+
+.delete-icon {
+    display: table-cell !important;
+    text-align: center;
+    width: 10%;
+    vertical-align: middle;
+    font-size: 36px !important;
+}
+
