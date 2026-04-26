@@ -1,7 +1,7 @@
 'use strict';
 
-chrome.browserAction.onClicked.addListener(function(activeTab) {
-	chrome.tabs.create({'url': chrome.extension.getURL('popup.html')});
+chrome.action.onClicked.addListener(async (tab) => {
+	chrome.tabs.create({'url': chrome.runtime.getURL('popup.html')});
 });
 
 chrome.webNavigation.onDOMContentLoaded.addListener(function(details) {

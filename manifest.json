@@ -1,6 +1,6 @@
 {
   "name": "Unused Bookmarks",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Get know when was the last time when you've opened each bookmark.",
   "permissions": [
     "bookmarks", "storage", "webNavigation", "activeTab"
@@ -19,10 +19,10 @@
    "css": ["styles.css"]
  }],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "32": "images/icon32.png",
       "48": "images/icon48.png",
@@ -32,5 +32,5 @@
       "512": "images/icon512.png"
     }
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }

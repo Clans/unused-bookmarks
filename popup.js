@@ -89,7 +89,8 @@ function getFormattedDateTime(timestamp) {
 }
 
 function setLastVisitedClickListener() {
-  $('#header-last-visited').click(function(event) {
+  $('#header-last-visited').on('click', function(event) {
+    event.preventDefault();
     $('#header-created-date').attr('class', 'regular');
     $('#header-title-container').attr('class', 'regular');
     doSort(this, 'lastVisited');
@@ -97,7 +98,8 @@ function setLastVisitedClickListener() {
 }
 
 function setCreatedDateClickListener() {
-  $('#header-created-date').click(function(event) {
+  $('#header-created-date').on('click', function(event) {
+    event.preventDefault();
     $('#header-last-visited').attr('class', 'regular');
     $('#header-title-container').attr('class', 'regular');
     doSort(this, 'createdDate');
@@ -105,7 +107,8 @@ function setCreatedDateClickListener() {
 }
 
 function setTitleClickListener() {
-  $('#header-title-container').click(function(event) {
+  $('#header-title-container').on('click', function(event) {
+    event.preventDefault();
     $('#header-created-date').attr('class', 'regular');
     $('#header-last-visited').attr('class', 'regular');
     doSort(this, 'title');
@@ -175,8 +178,9 @@ function outputBookmark(number, bookmark) {
   var deleteBookmarkDiv = $('<div>');
   deleteBookmarkDiv.attr('class', 'delete-icon material-icons');
   var a = $('<a>');
-  a.attr('href', 'javascript:void(0)');
-  a.click(function () {
+  a.attr('href', '#');
+  a.on('click', function () {
+    event.preventDefault();
     deleteConfirmation(bookmark);
   });
   a.append('delete_forever');

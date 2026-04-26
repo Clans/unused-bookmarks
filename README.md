@@ -2,7 +2,7 @@
 Get know when was the last time when you've opened each bookmark. Chrome extension.
 # License
 ```
-Copyright (C) 2019  Dmytro Tarianyk
+Copyright (C) 2026  Dmytro Tarianyk
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
