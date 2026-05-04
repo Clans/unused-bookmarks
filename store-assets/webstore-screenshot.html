@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unused Bookmarks Web Store Screenshot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .store-shot {
+            width: 1280px;
+            height: 800px;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .store-shot .app-shell {
+            width: 1180px;
+            padding-top: 30px;
+        }
+
+        .store-shot .page-header {
+            margin-bottom: 20px;
+        }
+
+        .store-shot .header {
+            position: static;
+        }
+
+        .store-shot .delete-icon a {
+            position: relative;
+            font-size: 0;
+        }
+
+        .store-shot .delete-icon a::before {
+            width: 15px;
+            height: 16px;
+            margin-top: 5px;
+            border: 2px solid currentColor;
+            border-top: 0;
+            border-radius: 0 0 3px 3px;
+            content: "";
+        }
+
+        .store-shot .delete-icon a::after {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 999px;
+            box-shadow: 0 -4px 0 -1px currentColor;
+            content: "";
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="unused-bookmarks store-shot">
+    <main class="app-shell" aria-label="Unused bookmarks">
+        <header class="page-header">
+            <div class="brand">
+                <img class="brand-icon" src="../images/icon48.png" alt="">
+                <div>
+                    <h1>Unused Bookmarks</h1>
+                    <p>Review saved pages by title, creation date, and last visit.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="bookmarks-panel" aria-label="Bookmark list">
+            <div class="header" role="row">
+                <div id="header-number" role="columnheader">#</div>
+                <div id="header-title-container" class="regular" role="columnheader"><a href="javascript:void(0)">Bookmark title</a></div>
+                <div id="header-created-date" class="regular" role="columnheader"><a href="javascript:void(0)">Created date</a></div>
+                <div id="header-last-visited" class="up" role="columnheader"><a href="javascript:void(0)">Last visited</a></div>
+                <div id="header-actions" role="columnheader">Actions</div>
+            </div>
+
+            <div id="bookmarks" aria-live="polite">
+                <ul>
+                    <li class="item-container">
+                        <div class="number">1</div>
+                        <div class="title-container">
+                            <div class="bookmark-title">Research: browser extension publishing checklist</div>
+                            <div class="url">https://example.com/extension-publishing-checklist</div>
+                            <div class="bookmark-tags">Work &gt; Browser tools &gt; Publishing</div>
+                        </div>
+                        <div class="created-date">Jan 12, 2025, 09:34</div>
+                        <div class="created-date">N/A</div>
+                        <div class="delete-icon material-icons"><a href="#" aria-label="Delete bookmark">delete_forever</a></div>
+                    </li>
+                    <li class="item-container">
+                        <div class="number">2</div>
+                        <div class="title-container">
+                            <div class="bookmark-title">Design inspiration: compact data tables</div>
+                            <div class="url">https://example.com/ui/table-patterns</div>
+                            <div class="bookmark-tags">Design &gt; Interface references</div>
+                        </div>
+                        <div class="created-date">Mar 4, 2025, 16:20</div>
+                        <div class="created-date">Apr 17, 2025, 11:08</div>
+                        <div class="delete-icon material-icons"><a href="#" aria-label="Delete bookmark">delete_forever</a></div>
+                    </li>
+                    <li class="item-container">
+                        <div class="number">3</div>
+                        <div class="title-container">
+                            <div class="bookmark-title">Launch notes backlog</div>
+                            <div class="url">https://example.com/product/launch-notes</div>
+                            <div class="bookmark-tags">Projects &gt; Product writing</div>
+                        </div>
+                        <div class="created-date">Jun 21, 2025, 08:51</div>
+                        <div class="created-date">May 30, 2025, 18:12</div>
+                        <div class="delete-icon material-icons"><a href="#" aria-label="Delete bookmark">delete_forever</a></div>
+                    </li>
+                    <li class="item-container">
+                        <div class="number">4</div>
+                        <div class="title-container">
+                            <div class="bookmark-title">Accessibility color contrast reference</div>
+                            <div class="url">https://example.com/accessibility/color-contrast</div>
+                            <div class="bookmark-tags">Reference &gt; Accessibility</div>
+                        </div>
+                        <div class="created-date">Jul 9, 2025, 14:45</div>
+                        <div class="created-date">Sep 2, 2025, 10:03</div>
+                        <div class="delete-icon material-icons"><a href="#" aria-label="Delete bookmark">delete_forever</a></div>
+                    </li>
+                    <li class="item-container">
+                        <div class="number">5</div>
+                        <div class="title-container">
+                            <div class="bookmark-title">Archive: old sprint planning dashboard</div>
+                            <div class="url">https://example.com/archive/sprint-dashboard</div>
+                            <div class="bookmark-tags">Work &gt; Archived dashboards</div>
+                        </div>
+                        <div class="created-date">Sep 18, 2025, 12:07</div>
+                        <div class="created-date">Oct 11, 2025, 15:42</div>
+                        <div class="delete-icon material-icons"><a href="#" aria-label="Delete bookmark">delete_forever</a></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

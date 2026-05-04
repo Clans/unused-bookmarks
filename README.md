@@ -1,5 +1,5 @@
 # unused-bookmarks
-Get know when was the last time when you've opened each bookmark. Chrome extension.
+Get to know when was the last time when you've opened each bookmark. Chrome extension.
 # License
 ```
 Copyright (C) 2026  Dmytro Tarianyk

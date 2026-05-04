@@ -1,171 +1,309 @@
-.unused-bookmarks {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 300;
-    background: #F0F2EF;
+}
+
+.unused-bookmarks {
+    margin: 0;
+    min-width: 720px;
+    color: #172033;
+    background: #f5f7fb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
 }
 
 .unused-bookmarks a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 .unused-bookmarks ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .unused-bookmarks li {
-    margin: .5em 0;
+    margin: 0;
+}
+
+.app-shell {
+    width: min(1180px, calc(100vw - 40px));
+    margin: 0 auto;
+    padding: 28px 0 36px;
+}
+
+.page-header {
+    margin-bottom: 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(23, 32, 51, 0.12);
+}
+
+.brand h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    color: #657083;
+    font-size: 14px;
+}
+
+.bookmarks-panel {
+    background: #ffffff;
+    border: 1px solid #d9e0ea;
+    border-radius: 8px;
+    box-shadow: 0 16px 40px rgba(23, 32, 51, 0.08);
+}
+
+.header,
+.item-container {
+    display: grid;
+    grid-template-columns: 56px minmax(260px, 1fr) minmax(150px, 0.34fr) minmax(150px, 0.34fr) 88px;
+    align-items: center;
+    column-gap: 0;
 }
 
 .header {
-    width: 100%;
-    display: table;
-    color: #39A9EF;
-    font-weight: 400;
-    padding-top: .75em;
-    padding-bottom: .75em;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-underline-position: under;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    color: #4b5563;
+    background: #eef3f8;
+    border-bottom: 1px solid #d9e0ea;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
 }
 
-#header-number {
-    font-size: 1.2em;
-    display: table-cell;
-    padding-right: 10px;
-    width: 3%;
-    text-align: right;
+.header > div,
+.item-container > div {
+    min-width: 0;
+    padding: 12px 14px;
 }
 
-#header-title-container {
-    font-size: 1.2em;
-    display: table-cell;
-    width: 50%;
-}
-
-#header-title-container.regular:before {
-    content: "";
-}
-
-#header-title-container.down:before {
-    content: "\2193\00a0";
-}
-
-#header-title-container.up:before {
-    content: "\2191\00a0";
-}
-
-#header-created-date {
-    font-size: 1.2em;
-    display: table-cell;
-    width: 15%;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-}
-
-#header-created-date.regular:before {
-    content: "";
-}
-
-#header-created-date.down:before {
-    content: "\2193\00a0";
-}
-
-#header-created-date.up:before {
-    content: "\2191\00a0";
-}
-
-#header-last-visited {
-    font-size: 1.2em;
-    display: table-cell;
-    width: 15%;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-}
-
-#header-last-visited.regular:before {
-    content: "";
-}
-
-#header-last-visited.down:before {
-    content: "\2193\00a0";
-}
-
-#header-last-visited.up:before {
-    content: "\2191\00a0";
-}
-
+#header-number,
+#header-title-container,
+#header-created-date,
+#header-last-visited,
 #header-actions {
-    font-size: 1.2em;
-    display: table-cell;
-    width: 10%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: auto;
+    font-size: inherit;
+}
+
+#header-title-container,
+#header-created-date,
+#header-last-visited {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#header-created-date,
+#header-last-visited {
+    justify-content: center;
+}
+
+#header-number,
+#header-actions {
+    display: block;
+}
+
+#header-number,
+.number {
+    color: #6b7280;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+#header-created-date,
+#header-last-visited,
+#header-actions,
+.created-date,
+.delete-icon {
     text-align: center;
+}
+
+#header-title-container a,
+#header-created-date a,
+#header-last-visited a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 28px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: #334155;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+#header-title-container a:hover,
+#header-created-date a:hover,
+#header-last-visited a:hover,
+#header-title-container a:focus-visible,
+#header-created-date a:focus-visible,
+#header-last-visited a:focus-visible {
+    color: #0f5f9f;
+    background: #dfeefa;
+    outline: none;
+}
+
+#header-title-container.regular::before,
+#header-created-date.regular::before,
+#header-last-visited.regular::before {
+    content: "";
+}
+
+#header-title-container.down::before,
+#header-created-date.down::before,
+#header-last-visited.down::before {
+    content: "\2193";
+    color: #0f7bbf;
+}
+
+#header-title-container.up::before,
+#header-created-date.up::before,
+#header-last-visited.up::before {
+    content: "\2191";
+    color: #0f7bbf;
 }
 
 .item-container {
     width: 100%;
-    display: table;
-    /*background: rgba(0,0,0,0.78);*/
-    color: #000;
-    padding-top: .75em;
-    padding-bottom: .75em;
-    border-radius: 4px;
-    transition: background .3s ease;
-    table-layout: fixed;
+    color: #172033;
+    background: #ffffff;
+    border-bottom: 1px solid #edf1f6;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
     word-wrap: break-word;
 }
 
+.item-container:last-child {
+    border-bottom: 0;
+}
+
 .item-container:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: #f8fbff;
+    box-shadow: inset 3px 0 0 #39a9ef;
 }
 
 .number {
-    display: table-cell;
-    font-size: 1.3em;
-    padding-right: 10px;
-    width: 3%;
-    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .title-container {
-    display: table-cell;
-    width: 50%;
+    width: auto;
 }
 
 .bookmark-title {
-    font-size: 1.3em;
-}
-
-.bookmark-tags {
-    margin-top: 6px;
-}
-
-.created-date {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    width: 15%;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.2em;
+    overflow-wrap: anywhere;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .url {
-    color: #999999;
+    overflow-wrap: anywhere;
+    margin-top: 3px;
+    color: #667085;
+    font-size: 12px;
+}
+
+.bookmark-tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 8px;
+    padding: 3px 8px;
+    color: #475467;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.created-date {
+    color: #344054;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
 }
 
 .delete-icon {
-    display: table-cell !important;
-    text-align: center;
-    width: 10%;
-    vertical-align: middle;
-    font-size: 36px !important;
+    width: auto;
+    color: #98a2b3;
+    font-size: 0 !important;
 }
 
+.delete-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.delete-icon a:hover,
+.delete-icon a:focus-visible {
+    color: #b42318;
+    background: #fee4e2;
+    outline: none;
+    transform: translateY(-1px);
+}
+
+#bookmarks:empty::before {
+    display: block;
+    padding: 28px;
+    color: #667085;
+    content: "Loading bookmarks...";
+}
+
+@media (max-width: 820px) {
+    .unused-bookmarks {
+        min-width: 0;
+    }
+
+    .app-shell {
+        width: min(720px, calc(100vw - 24px));
+        padding-top: 18px;
+    }
+
+    .header,
+    .item-container {
+        grid-template-columns: 44px minmax(180px, 1fr) 118px 118px 62px;
+    }
+
+    .header > div,
+    .item-container > div {
+        padding: 10px 8px;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .brand p {
+        font-size: 13px;
+    }
+}
