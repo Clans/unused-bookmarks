@@ -1,18 +1,35 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unused Bookmarks</title>
 	<link rel="stylesheet" href="styles.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="unused-bookmarks">
-	<!-- <div>Search Bookmarks: <input id="search"></div> -->
-	<div class="header">
-		<div id="header-number">#</div>
-		<div id="header-title-container"><a href="javascript:void(0)">Bookmark title</a></div>
-		<div id="header-created-date"><a href="javascript:void(0)">Created date</a></div>
-		<div id="header-last-visited"><a href="javascript:void(0)">Last visited</a></div>
-		<div id="header-actions">Actions</div>
-	</div>
-	<div id="bookmarks"></div>
+	<main class="app-shell" aria-label="Unused bookmarks">
+		<header class="page-header">
+			<div class="brand">
+				<img class="brand-icon" src="images/icon48.png" alt="">
+				<div>
+					<h1>Unused Bookmarks</h1>
+					<p>Review saved pages by title, creation date, and last visit.</p>
+				</div>
+			</div>
+		</header>
+
+		<section class="bookmarks-panel" aria-label="Bookmark list">
+			<div class="header" role="row">
+				<div id="header-number" role="columnheader">#</div>
+				<div id="header-title-container" role="columnheader"><a href="javascript:void(0)">Bookmark title</a></div>
+				<div id="header-created-date" role="columnheader"><a href="javascript:void(0)">Created date</a></div>
+				<div id="header-last-visited" role="columnheader"><a href="javascript:void(0)">Last visited</a></div>
+				<div id="header-actions" role="columnheader">Actions</div>
+			</div>
+			<div id="bookmarks" aria-live="polite"></div>
+		</section>
+	</main>
 
 	<script src="jquery.min.js"></script>
 	<script src="popup.js"></script>

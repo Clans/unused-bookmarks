@@ -1,7 +1,7 @@
 {
   "name": "Unused Bookmarks",
-  "version": "0.0.3",
-  "description": "Get know when was the last time when you've opened each bookmark.",
+  "version": "0.0.4",
+  "description": "Get to know when was the last time when you've opened each bookmark.",
   "permissions": [
     "bookmarks", "storage", "webNavigation", "activeTab"
   ],
